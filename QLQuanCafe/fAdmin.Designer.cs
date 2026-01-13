@@ -90,7 +90,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCategory = new System.Windows.Forms.TextBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.txbCategoryID = new System.Windows.Forms.TextBox();
@@ -791,7 +791,7 @@
             // panel18
             // 
             this.panel18.Controls.Add(this.label11);
-            this.panel18.Controls.Add(this.textBox2);
+            this.panel18.Controls.Add(this.txbCategory);
             this.panel18.Location = new System.Drawing.Point(3, 76);
             this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
@@ -809,14 +809,14 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Tên danh mục:";
             // 
-            // textBox2
+            // txbCategory
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(173, 13);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 34);
-            this.textBox2.TabIndex = 1;
+            this.txbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbCategory.Location = new System.Drawing.Point(173, 13);
+            this.txbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCategory.Name = "txbCategory";
+            this.txbCategory.Size = new System.Drawing.Size(208, 34);
+            this.txbCategory.TabIndex = 1;
             // 
             // panel19
             // 
@@ -879,6 +879,7 @@
             this.btnEditCategory.TabIndex = 3;
             this.btnEditCategory.Text = "Sửa danh mục";
             this.btnEditCategory.UseVisualStyleBackColor = true;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnDelCategory
             // 
@@ -889,6 +890,7 @@
             this.btnDelCategory.TabIndex = 2;
             this.btnDelCategory.Text = "Xóa danh mục";
             this.btnDelCategory.UseVisualStyleBackColor = true;
+            this.btnDelCategory.Click += new System.EventHandler(this.btnDelCategory_Click);
             // 
             // btnAddCategory
             // 
@@ -899,6 +901,7 @@
             this.btnAddCategory.TabIndex = 1;
             this.btnAddCategory.Text = "Thêm danh mục";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // panel22
             // 
@@ -910,11 +913,16 @@
             // 
             // dtgvCategory
             // 
+            this.dtgvCategory.AllowUserToAddRows = false;
+            this.dtgvCategory.AllowUserToDeleteRows = false;
+            this.dtgvCategory.AllowUserToResizeRows = false;
             this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCategory.Location = new System.Drawing.Point(3, 3);
             this.dtgvCategory.Name = "dtgvCategory";
+            this.dtgvCategory.ReadOnly = true;
             this.dtgvCategory.RowHeadersWidth = 51;
             this.dtgvCategory.RowTemplate.Height = 24;
+            this.dtgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCategory.Size = new System.Drawing.Size(789, 570);
             this.dtgvCategory.TabIndex = 0;
             // 
@@ -1402,7 +1410,7 @@
         private System.Windows.Forms.DataGridView dtgvCategory;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCategory;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txbCategoryID;
